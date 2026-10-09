@@ -1,0 +1,28 @@
+{
+	"$schema": "https://raw.githubusercontent.com/untrustedmodders/plugify/refs/heads/main/schemas/plugin.schema.json",
+	"version": "${AS_WARNSYSTEM_VERSION}",
+	"name": "as_warnsystem",
+	"description": "Warning system for the admin_system plugin, ported from the Pisex Metamod module '[AS] WarnSystem'. Admins issue warnings with a reason and an expiry ('!warn' / 'mm_warn', reason menus, offline steamid64 targets), the module bans a player automatically when the warning limit is reached, keeps the offline warning list of recently disconnected players, provides '!warns' / 'mm_warns' for the player's own warnings and registers the warning item in the admin menu category from warnsystem.ini. Warnings are stored in the shared Metamod-compatible `as_warnsystem` table (the module opens its own database connection with the settings of admin_system; config warnsystem.ini, phrases from admin_system.phrases.txt). No exported methods.",
+	"author": "ABKAM, ported to Plugify",
+	"website": "https://github.com/untrustedmodders/plugify",
+	"license": "GPL-3.0",
+	"entry": "bin/as_warnsystem",
+	"platforms": [],
+	"language": "cpp",
+	"dependencies": [
+		{
+			"name": "s2sdk",
+			"constraints": ">=2.18.2"
+		},
+		{
+			"name": "admin_system",
+			"constraints": ">=1.0.0"
+		},
+		{
+			"name": "hudmenu",
+			"constraints": ">=1.0.0",
+			"optional": true
+		}
+	],
+	"methods": []
+}
